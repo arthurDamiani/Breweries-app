@@ -38,14 +38,6 @@ export default {
     INFO_LIGHT: '#D7F5FA',
   },
 
-  FONT_FAMILY: {
-    BLACK_900: 'Roboto_900Black', //Verify
-    BOLD_700: 'Roboto_700Bold',
-    MEDIUM_500: 'Roboto_500Medium',
-    REGULAR_400: 'Roboto_400Regular',
-    //REGULAR_500: 'Roboto500Regular'
-  },
-
   FONT_SIZE: {
     XLL: 20,
     XL: 16,

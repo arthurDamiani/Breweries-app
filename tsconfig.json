@@ -5,11 +5,10 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["./src/app/components/*"],
-      "@domain/*": ["./src/core/domain/*"],
-      "@hooks/*": ["./src/core/hooks/*"],
-      "@pages/*": ["./src/app/pages/*"],
-      "@routes/*": ["./src/routes/*"],
+      "@screens/*": ["./src/app/screens/*"],
+      "@routes/*": ["./src/core/routes/*"],
       "@services/*": ["./src/core/services/*"],
+      "@utils/*": ["./src/core/utils/*"],
       "@themes/*": ["src/app/shared/styles/themes/*"],
       "@shared/*": ["./src/app/shared/*"]
     }
