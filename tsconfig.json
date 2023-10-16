@@ -9,8 +9,10 @@
       "@routes/*": ["./src/core/routes/*"],
       "@services/*": ["./src/core/services/*"],
       "@utils/*": ["./src/core/utils/*"],
+      "@contexts/*": ["./src/core/contexts/*"],
       "@themes/*": ["src/app/shared/styles/themes/*"],
-      "@shared/*": ["./src/app/shared/*"]
+      "@shared/*": ["./src/app/shared/*"],
+      "@locales/*": ["./src/core/i18n/locales/*"]
     }
   }
 }

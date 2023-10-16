@@ -4,7 +4,6 @@ export const HeaderContainer = styled.View`
   width: 100%;
   height: 80px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   background-color: ${({ theme }) => theme.COLORS.PRIMARY};
   color: ${({ theme }) => theme.COLORS.SECONDARY};

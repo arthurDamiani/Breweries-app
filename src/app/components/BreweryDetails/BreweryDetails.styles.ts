@@ -3,10 +3,9 @@ import styled from 'styled-components/native';
 export const BreweryDetailsContainer = styled.View`
   width: 80%;
   margin: 0 auto;
-  padding-left: 1rem;
-  border-radius: ${({ theme }) => theme.COLORS.PRIMARY};
+  padding-left: 10px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.COLORS.PRIMARY};
-  box-shadow: 1px 1px 1px 1px ${({ theme }) => theme.COLORS.PRIMARY};
 `;
 
 export const BreweryDetailsTitle = styled.Text`

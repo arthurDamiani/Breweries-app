@@ -1,5 +1,5 @@
 export const BreweryTypesColors: { [key: string]: string } = {
-  micro: 'mediumSpringGreen',
+  micro: 'gray',
   nano: 'green',
   regional: 'red',
   brewpub: 'purple',

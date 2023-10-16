@@ -16,6 +16,8 @@ module.exports = function (api) {
             '@themes': './src/app/shared/styles/themes',
             '@shared': './src/app/shared',
             '@utils': './src/core/utils',
+            '@contexts': './src/core/contexts',
+            '@locales': './src/core/i18n/locales',
           },
         },
       ],

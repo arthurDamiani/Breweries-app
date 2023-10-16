@@ -3,8 +3,8 @@ import { useNavigation } from '@react-navigation/native';
 import { BreweryTypesColors } from '@utils/handleBewerieTypes';
 import { BreweryItemContainer, BreweryText, BreweryTitle, BreweryType, BreweryTypeText } from './BreweryItem.styles';
 
-export interface BreweryItemProps {
-  id?: number;
+export interface BreweryItemData {
+  id: number;
   name?: string;
   brewery_type: string;
   street?: string;
@@ -15,35 +15,30 @@ export interface BreweryItemProps {
   phone?: string;
 }
 
-export const BreweryItem = ({
-  id,
-  name,
-  street,
-  city,
-  state,
-  country,
-  postal_code,
-  brewery_type,
-}: BreweryItemProps) => {
+export interface BreweryItemProps {
+  item: BreweryItemData;
+}
+
+export const BreweryItem = ({ item }: BreweryItemProps) => {
   const navigation = useNavigation();
-  const typeColor = BreweryTypesColors[brewery_type] ?? 'gray';
+  const typeColor = BreweryTypesColors[item.brewery_type] ?? 'gray';
 
   const handleGoToDetails = () => {
-    console.log('fui');
+    navigation.navigate('BreweryDetails', { breweryId: item.id });
   };
   return (
     <TouchableOpacity onPress={handleGoToDetails}>
       <BreweryItemContainer>
-        <BreweryTitle>{name}</BreweryTitle>
+        <BreweryTitle>{item.name}</BreweryTitle>
         <View>
-          <BreweryText>{street}</BreweryText>
+          <BreweryText>{item.street}</BreweryText>
           <BreweryText>
-            {city} {state} - {postal_code}
+            {item.city} {item.state} - {item.postal_code}
           </BreweryText>
-          <BreweryText>{country}</BreweryText>
+          <BreweryText>{item.country}</BreweryText>
         </View>
         <BreweryType breweryType={typeColor}>
-          <BreweryTypeText>{brewery_type}</BreweryTypeText>
+          <BreweryTypeText>{item.brewery_type}</BreweryTypeText>
         </BreweryType>
       </BreweryItemContainer>
     </TouchableOpacity>

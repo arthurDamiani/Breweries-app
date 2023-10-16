@@ -1,28 +1,33 @@
 import { BreweryItemProps } from '@components/BreweryItem';
 import { BreweryDetailsContainer, BreweryDetailsText, BreweryDetailsTitle } from './BreweryDetails.styles';
 
-export const BreweryDetails = ({
-  name,
-  brewery_type,
-  street,
-  city,
-  state,
-  postal_code,
-  country,
-  phone,
-}: BreweryItemProps) => {
+export const BreweryDetails = ({ item }: BreweryItemProps) => {
   const handleShowInfo = (info?: string) => (info ? info : 'Not provided');
 
   return (
     <BreweryDetailsContainer>
-      <BreweryDetailsTitle>{name}</BreweryDetailsTitle>
-      <BreweryDetailsText>Type: {brewery_type}</BreweryDetailsText>
-      <BreweryDetailsText>Street: {handleShowInfo(street)}</BreweryDetailsText>
-      <BreweryDetailsText>City: {handleShowInfo(city)}</BreweryDetailsText>
-      <BreweryDetailsText>State: {handleShowInfo(state)}</BreweryDetailsText>
-      <BreweryDetailsText>Postal code: {handleShowInfo(postal_code)}</BreweryDetailsText>
-      <BreweryDetailsText>Country: {handleShowInfo(country)}</BreweryDetailsText>
-      <p>Phone: {handleShowInfo(phone)}</p>
+      <BreweryDetailsTitle>{item.name}</BreweryDetailsTitle>
+      <BreweryDetailsText>
+        {translate('breweryDetails.type')} {item.brewery_type}
+      </BreweryDetailsText>
+      <BreweryDetailsText>
+        {translate('breweryDetails.street')} {handleShowInfo(item.street)}
+      </BreweryDetailsText>
+      <BreweryDetailsText>
+        {translate('breweryDetails.city')} {handleShowInfo(item.city)}
+      </BreweryDetailsText>
+      <BreweryDetailsText>
+        {translate('breweryDetails.state')} {handleShowInfo(item.state)}
+      </BreweryDetailsText>
+      <BreweryDetailsText>
+        {translate('breweryDetails.postalCode')} {handleShowInfo(item.postal_code)}
+      </BreweryDetailsText>
+      <BreweryDetailsText>
+        {translate('breweryDetails.country')} {handleShowInfo(item.country)}
+      </BreweryDetailsText>
+      <BreweryDetailsText>
+        {translate('breweryDetails.phone')} {handleShowInfo(item.phone)}
+      </BreweryDetailsText>
     </BreweryDetailsContainer>
   );
 };
